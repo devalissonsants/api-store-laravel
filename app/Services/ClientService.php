@@ -13,12 +13,12 @@ class ClientService
 
     public function getAllClient($requestInfo)
     {
-        return $this->client->all();
+        return $this->client->get();
     }
 
     public function getClient($id)
     {
-      return $this->bank->findOrFail($id);
+      return $this->client->findOrFail($id);
     }
 
     public function postClient($requestInfo)

@@ -9,4 +9,9 @@ class OrderHasProduct extends Model
 {
     protected $table='order_has_products';
     protected $guarded = [];
+
+    public function product()
+    {
+        return $this->hasOne(Product::class, 'id', 'product_id');
+    }
 }
